@@ -1,0 +1,23 @@
+type PhoneCall {
+    id: ID!
+    type: String!
+    date: String!
+    customer: Customer!
+    manager: Manager!
+}
+
+type Customer {
+    id: ID!
+    name: String!
+    type: String!
+}
+
+type Manager {
+    id: ID!
+    name: String!
+    type: String!
+}
+
+type Query {
+    phoneCalls(number: Int): [PhoneCall]
+}
